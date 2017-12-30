@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CarsCollection.Views.UpdateCar"
+    Title="Update a Car">
+	<StackLayout Padding="20">
+      <Label Text="Enter the Id of the car"/>
+      <Entry Text="{Binding CarDetails.Id, Mode=TwoWay}"/>
+
+      <Label Text="Enter the name of the car"/>
+      <Entry Text="{Binding CarDetails.Name, Mode=TwoWay}"/>
+
+      <Label Text="Enter the year of the car"/>
+      <Entry Text="{Binding CarDetails.Year, Mode=TwoWay}"/>
+
+      <Label Text="Enter the number of seats"/>
+      <Entry Text="{Binding CarDetails.Seat, Mode=TwoWay}"/>
+         
+      <Button Text="Update"
+              Command="{Binding UpdateCommand}" Clicked="OnAlertSimpleClicked"/>
+       </StackLayout>
+</ContentPage>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CarsCollection.Views.DeleteCar"
+    Title="Delete a Car">
+
+    <StackLayout>
+    <Label Text="Enter an id to delete"/>
+      <Entry Text="{Binding CarDetails.Id, Mode=TwoWay}"/>
+        
+      <Button Text="Delete"
+              Command="{Binding RemoveCommand}" Clicked="OnAlertSimpleClicked"/>
+    </StackLayout>
+</ContentPage>

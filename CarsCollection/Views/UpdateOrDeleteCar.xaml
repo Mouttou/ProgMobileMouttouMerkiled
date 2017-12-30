@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CarsCollection.Views.UpdateOrDeleteCar"
+    xmlns:carVm="clr-namespace:CarsCollection.ViewModels"
+    Title="Update or delete Car">
+   
+    <StackLayout Padding="20">
+      <Label Text="Enter Car Id for Update"/>
+      <Entry Text="{Binding CarDetails.Id, Mode=TwoWay}"/>
+
+      <Label Text="Enter Car Name"/>
+      <Entry Text="{Binding CarDetails.Name, Mode=TwoWay}"/>
+
+      <Label Text="Enter Car Year"/>
+      <Entry Text="{Binding CarDetails.Year, Mode=TwoWay}"/>
+
+      <Label Text="Enter Car Seat number"/>
+      <Entry Text="{Binding CarDetails.Seat, Mode=TwoWay}"/>
+         
+      <Button Text="Update"
+              Command="{Binding UpdateCommand}"/>
+
+
+      <Label Text="Enter Car Id for Delete"/>
+      <Entry Text="{Binding CarDetails.Id, Mode=TwoWay}"/>
+        
+      <Button Text="Delete"
+              Command="{Binding RemoveCommand}"/>
+    </StackLayout>
+    
+</ContentPage>
